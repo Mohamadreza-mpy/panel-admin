@@ -13,4 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-include('admin.php');
+Route::controller(\App\Http\Controllers\Admin\HomeController::class)->group(function (){
+    Route::get('/', 'index');
+});
