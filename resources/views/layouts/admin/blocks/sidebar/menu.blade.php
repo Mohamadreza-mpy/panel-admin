@@ -413,7 +413,7 @@
 
 
 <div class="menu-item">
-    <a class="menu-link" href="#">
+    <a class="menu-link" href="{{route('admin.users.index')}}">
         <span class="menu-icon">
 
             <span class="svg-icon svg-icon-2">

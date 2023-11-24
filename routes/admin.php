@@ -32,6 +32,16 @@ Route::prefix('admin')->name('admin.')->group(function (){
         Route::get('role/delete/{id}', 'delete')->name('role.delete');
     });
 
+    Route::controller(\App\Http\Controllers\Admin\UserController::class)->group(function (){
+        Route::get('users', 'index')->name('users.index');
+        Route::get('users/create', 'getCreate')->name('users.create');
+        Route::post('users/store', 'postCreate')->name('users.create');
+        Route::get('users/edit/{id}', 'getEdit')->name('users.edit');
+        Route::post('users/update/{id}', 'postEdit')->name('users.edit');
+        Route::get('users/delete/{id}', 'delete')->name('users.delete');
+    });
+
+
 
 
 
