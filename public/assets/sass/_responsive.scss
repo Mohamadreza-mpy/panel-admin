@@ -1,0 +1,480 @@
+@media (max-width: 576px) {
+	.container {
+		width: 100%;
+		max-width: 100%;
+	}
+	.menu {
+		.nav-link {
+			padding: 15px 0 5px !important;
+			font-size: 16px !important;
+			width: max-content;
+			&.active::after {
+				margin-left: auto;
+				width: 50% !important;
+			}
+		}
+	}
+	.header {
+		.card {
+			height: 25rem;
+		}
+
+		.carousel {
+			.title-1 {
+				font-size: 20px;
+				line-height: 25px;
+			}
+
+			.title-2 {
+				font-size: 12px;
+				line-height: 25px;
+				padding: 0 15px;
+			}
+
+			.title-3 {
+				font-size: 11px;
+				line-height: 25px;
+				padding: 0 15px;
+			}
+		}
+	}
+	.main-reservation {
+		.card {
+			height: 22rem;
+		}
+	}
+	.description {
+		img {
+			width: 100% !important;
+			height: auto !important;
+			margin-right: 0%;
+		}
+	}
+	.consultants-list .consultants {
+		box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.05);
+	}
+}
+@media (min-width: 576px) and (max-width: 768px) {
+	.container {
+		width: 100%;
+		max-width: 100%;
+	}
+	.menu {
+		.nav-link {
+			padding: 15px 0 5px !important;
+			font-size: 16px !important;
+			width: max-content;
+			&.active::after {
+				margin-left: auto;
+				width: 50% !important;
+			}
+		}
+	}
+	.header {
+		.card {
+			height: 25rem;
+		}
+
+		.carousel {
+			.title-1 {
+				font-size: 30px;
+			}
+
+			.title-2 {
+				font-size: 16px;
+			}
+
+			.title-3 {
+				font-size: 12px;
+			}
+		}
+	}
+	.main-reservation {
+		.card {
+			height: 19rem;
+		}
+	}
+	html,
+	body {
+		position: relative;
+		height: 75%;
+	}
+	.consultants {
+		box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.05);
+
+		.swiper-button-prev {
+			right: 42% !important;
+			left: auto !important;
+			bottom: 3rem !important;
+			top: auto !important;
+			transform: rotate(90deg);
+		}
+
+		.swiper-button-next {
+			right: 48% !important;
+			left: auto !important;
+			bottom: 3rem !important;
+			top: auto !important;
+			transform: rotate(90deg);
+		}
+
+		.swiper-button-prev,
+		.swiper-button-next {
+			background: #efefef;
+			border-radius: 15px;
+			width: 50px !important;
+			height: 40px !important;
+			color: #000;
+		}
+	}
+	.description {
+		img {
+			width: 100% !important;
+			height: auto !important;
+			margin-right: 0%;
+		}
+	}
+}
+@media (min-width: 768px) and (max-width: 992px) {
+	.container {
+		width: 97.5%;
+		max-width: 97.5%;
+	}
+	.menu {
+		.nav-link {
+			padding: 15px 0 5px !important;
+			font-size: 16px !important;
+			width: max-content;
+			&.active::after {
+				margin-left: auto;
+				width: 50% !important;
+			}
+		}
+	}
+	.header {
+		.card {
+			height: 25rem;
+		}
+
+		.carousel {
+			.title-1 {
+				font-size: 30px;
+			}
+
+			.title-2 {
+				font-size: 16px;
+			}
+
+			.title-3 {
+				font-size: 12px;
+			}
+		}
+	}
+	.main-reservation {
+		.card {
+			height: 13rem;
+		}
+	}
+	html,
+	body {
+		position: relative;
+		height: 70%;
+	}
+	.consultants {
+		box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.05);
+
+		.swiper-button-prev {
+			right: 42% !important;
+			left: auto !important;
+			bottom: 3rem !important;
+			top: auto !important;
+			transform: rotate(90deg);
+		}
+
+		.swiper-button-next {
+			right: 48% !important;
+			left: auto !important;
+			bottom: 3rem !important;
+			top: auto !important;
+			transform: rotate(90deg);
+		}
+
+		.swiper-button-prev,
+		.swiper-button-next {
+			background: #efefef;
+			border-radius: 15px;
+			width: 50px !important;
+			height: 40px !important;
+			color: #000;
+		}
+	}
+	.description {
+		img {
+			width: 90% !important;
+			height: auto !important;
+			margin-right: 5%;
+		}
+	}
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+	.container {
+		width: 99%;
+		max-width: 99%;
+	}
+	.menu {
+		.nav-link {
+			padding: 7.5px 28px !important;
+			&.active::after {
+				margin: auto;
+			}
+		}
+	}
+	.header {
+		.card {
+			height: 30rem;
+		}
+
+		.carousel {
+			.title-1 {
+				font-size: 38px;
+			}
+
+			.title-2 {
+				font-size: 18px;
+			}
+
+			.title-3 {
+				font-size: 14px;
+			}
+		}
+	}
+	.main-reservation {
+		.card {
+			height: 13rem;
+		}
+	}
+	html,
+	body {
+		position: relative;
+		height: 22rem;
+	}
+	.consultants {
+		box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.05);
+
+		.swiper-button-prev {
+			right: 34% !important;
+			left: auto !important;
+			bottom: 3rem !important;
+			top: auto !important;
+			transform: rotate(90deg);
+		}
+
+		.swiper-button-next {
+			right: 39% !important;
+			left: auto !important;
+			bottom: 3rem !important;
+			top: auto !important;
+			transform: rotate(90deg);
+		}
+
+		.swiper-button-prev,
+		.swiper-button-next {
+			background: #efefef;
+			border-radius: 15px;
+			width: 50px !important;
+			height: 40px !important;
+			color: #000;
+		}
+	}
+	.description {
+		img {
+			width: 80% !important;
+			height: auto !important;
+			margin-right: 10%;
+		}
+	}
+}
+@media (min-width: 1200px) and (max-width: 1400px) {
+	.container {
+		width: 95%;
+		max-width: 95%;
+	}
+	.menu {
+		.nav-link {
+			padding: 7.5px 28px !important;
+			&.active::after {
+				margin: auto;
+			}
+		}
+	}
+	.header {
+		.card {
+			height: 35rem;
+		}
+
+		.carousel {
+			.title-1 {
+				font-size: 40px;
+			}
+
+			.title-2 {
+				font-size: 20px;
+			}
+
+			.title-3 {
+				font-size: 16px;
+			}
+		}
+	}
+	.main-reservation {
+		.card {
+			height: 13rem;
+		}
+	}
+	html,
+	body {
+		position: relative;
+		height: 22rem;
+	}
+	.consultants {
+		box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.05);
+
+		.swiper-button-prev {
+			right: 27.5% !important;
+			left: auto !important;
+			bottom: 3rem !important;
+			top: auto !important;
+			transform: rotate(90deg);
+		}
+
+		.swiper-button-next {
+			right: 31.5% !important;
+			left: auto !important;
+			bottom: 3rem !important;
+			top: auto !important;
+			transform: rotate(90deg);
+		}
+
+		.swiper-button-prev,
+		.swiper-button-next {
+			background: #efefef;
+			border-radius: 15px;
+			width: 50px !important;
+			height: 40px !important;
+			color: #000;
+		}
+	}
+	.description {
+		img {
+			width: 70% !important;
+			height: auto !important;
+			margin-right: 15%;
+		}
+	}
+}
+@media (min-width: 1400px) {
+	.container {
+		width: 90%;
+		max-width: 90%;
+	}
+	.menu {
+		.nav-link {
+			padding: 7.5px 28px !important;
+			&.active::after {
+				margin: auto;
+			}
+		}
+	}
+	.header {
+		.card {
+			height: 37.5rem;
+		}
+
+		.carousel {
+			.title-1 {
+				font-size: 42px;
+			}
+
+			.title-2 {
+				font-size: 22px;
+			}
+
+			.title-3 {
+				font-size: 18px;
+			}
+		}
+	}
+	.main-reservation {
+		.card {
+			height: 13rem;
+		}
+	}
+	.consultants {
+		box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.05);
+		.swiper-button-prev {
+			right: 27.5% !important;
+			left: auto !important;
+			bottom: 3rem !important;
+			top: auto !important;
+			transform: rotate(90deg);
+		}
+
+		.swiper-button-next {
+			right: 31% !important;
+			left: auto !important;
+			bottom: 3rem !important;
+			top: auto !important;
+			transform: rotate(90deg);
+		}
+
+		.swiper-button-prev,
+		.swiper-button-next {
+			background: #efefef;
+			border-radius: 15px;
+			width: 50px !important;
+			height: 40px !important;
+			color: #000;
+		}
+	}
+
+	html,
+	body {
+		position: relative;
+		height: 22rem;
+	}
+	.description {
+		img {
+			width: 60% !important;
+			height: auto !important;
+			margin-right: 20%;
+		}
+	}
+}
+@media (min-width: 1500px) {
+	html,
+	body {
+		position: relative;
+		height: 24rem;
+	}
+}
+@media (min-width: 1600px) {
+	html,
+	body {
+		position: relative;
+		height: 25rem;
+	}
+}
+@media (min-width: 1700px) {
+	html,
+	body {
+		position: relative;
+		height: 26rem;
+	}
+}
+@media (min-width: 1800px) {
+	html,
+	body {
+		position: relative;
+		height: 27rem;
+	}
+}

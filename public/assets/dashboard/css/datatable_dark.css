@@ -1,0 +1,9 @@
+table.dataTable tbody tr>.dtfc-fixed-left,
+table.dataTable tbody tr>.dtfc-fixed-right {
+    background-color: rgba(0, 0, 0, 0)!important;
+}
+
+table.dataTable thead tr>.dtfc-fixed-left,
+table.dataTable thead tr>.dtfc-fixed-right {
+    background-color: rgba(0, 0, 0, 0)!important;
+}

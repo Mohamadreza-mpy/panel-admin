@@ -13,6 +13,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::controller(\App\Http\Controllers\Admin\HomeController::class)->group(function (){
-    Route::get('/', 'index');
+
+
+Route::prefix('admin')->name('admin.')->group(function (){
+
+
+
+    Route::controller(\App\Http\Controllers\Admin\HomeController::class)->group(function (){
+        Route::get('/', 'index')->name('dashboard');
+    });
+
+    Route::controller(\App\Http\Controllers\Admin\RoleController::class)->group(function (){
+        Route::get('role','index')->name('role.index');
+    });
+
+
+
+
+
+
 });

@@ -1,0 +1,17 @@
+@font-face {
+    font-family: iran;
+    font-style: normal;
+    src: url("./irsw/iran_sans.eot");
+    src: url("./irsw/iran_sans.eot") format("embedded-opentype"),
+        url("./irsw/iran_sans.woff") format("woff2"),
+        url("./irsw/iran_sans.woff") format("woff"),
+        url("./irsw/iran_sans.ttf") format("truetype");
+    font-display: swap;
+}
+* {
+    font-family: iran;
+}
+
+content_style: "body { font-family: Arial; }";
+
+

@@ -1,0 +1,56 @@
+.bg-white{
+    background-color: white;
+}
+.instruction{
+    width: 30% !important;
+}
+.instruction th, .instruction td{
+    border:1px solid gray !important;
+    white-space: nowrap;
+    padding: 0.75rem !important;
+}
+th, td{
+    border:1px solid gray !important;
+    white-space: nowrap;
+    padding: 0.75rem !important;
+}
+.table tbody tr:last-child td{
+    border-bottom:1px solid gray !important;
+}
+.bgCustom1{
+    background-color: #b6d7a8 !important;
+    border-rightr:2px solid white !important;
+    border-left: 2px solid white !important;
+}
+.bgCustom2{
+    background-color: #efefef !important;
+    border-rightr:2px solid white !important;
+    border-left: 2px solid white !important;
+}
+.bgCustom3{
+    background-color: #1155cc !important;
+    border-rightr:2px solid white !important;
+    border-left: 2px solid white !important;
+    color:white !important;
+
+}
+.bgCustom4{
+    background-color: #c27ba0 !important;
+}
+.timeTable .bgCustom3 ,.timeTable .bgCustom2, .timeTable .bgCustom1{
+    cursor: pointer;
+}
+.timeTable .bgCustom3:hover ,.timeTable .bgCustom2:hover, .timeTable .bgCustom1:hover{
+    background-color: rgba(255, 109, 1, 0.63) !important;
+    transition: 0.5s;
+}
+@media(min-width: 576px){
+    .instruction {
+        width: 100% !important;
+    }
+}
+@media(min-width: 992px){
+    .instruction {
+        width: 50% !important;
+    }
+}
