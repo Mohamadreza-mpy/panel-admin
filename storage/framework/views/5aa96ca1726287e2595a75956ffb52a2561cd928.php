@@ -400,7 +400,7 @@
 </div>
 
 <div class="menu-item">
-    <a class="menu-link" href="#">
+    <a class="menu-link" href="<?php echo e(route('admin.role.index')); ?>">
         <span class="menu-icon">
             <span class="svg-icon svg-icon-2">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -440,11 +440,6 @@
         <span class="menu-title">تنظیمات</span>
     </a>
 </div>
-
-
-
-
-
 
 
 

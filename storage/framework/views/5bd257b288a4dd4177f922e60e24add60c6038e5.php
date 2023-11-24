@@ -1,6 +1,4 @@
-@extends('layouts.admin.master')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
 
     <div class="card mb-5 mb-xl-8">
 
@@ -10,7 +8,7 @@
             </h3>
             <div class="card-toolbar" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-trigger="hover"
                  data-kt-initialized="1">
-                <a href="{{ url('admin/role/create') }}" class="btn btn-sm btn-light btn-active-info">
+                <a href="<?php echo e(url('admin/role/create')); ?>" class="btn btn-sm btn-light btn-active-info">
                     <span class="svg-icon svg-icon-3">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                              xmlns="http://www.w3.org/2000/svg">
@@ -35,13 +33,13 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach ($roles as $role)
+                    <?php $__currentLoopData = $roles; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $role): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <tr>
                             <td>
                                 <div class="d-flex align-items-center">
 
                                     <div class="d-flex justify-content-start flex-column">
-                                        <a href="#" class="text-dark fw-bold text-hover-primary fs-6">{{ $role->title }}</a>
+                                        <a href="#" class="text-dark fw-bold text-hover-primary fs-6"><?php echo e($role->title); ?></a>
 
                                     </div>
                                 </div>
@@ -50,7 +48,7 @@
                             <td>
                                 <div class="d-flex justify-content-end flex-shrink-0">
 
-                                    <a href="{{ url('admin/role/edit/'.$role->id) }}"
+                                    <a href="<?php echo e(url('admin/role/edit/'.$role->id)); ?>"
                                        class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1">
                                         <!--begin::Svg Icon | path: icons/duotune/art/art005.svg-->
                                         <span class="svg-icon svg-icon-3">
@@ -66,7 +64,7 @@
                                             </span>
                                         <!--end::Svg Icon-->
                                     </a>
-                                    <a onclick="fire('{{ $role->id }}', '{{ $role->title }}')" href="#" class="btn btn-icon btn-bg-light btn-active-color-danger btn-sm">
+                                    <a onclick="fire('<?php echo e($role->id); ?>', '<?php echo e($role->title); ?>')" href="#" class="btn btn-icon btn-bg-light btn-active-color-danger btn-sm">
                                         <!--begin::Svg Icon | path: icons/duotune/general/gen027.svg-->
                                         <span class="svg-icon svg-icon-3">
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -87,7 +85,7 @@
                                 </div>
                             </td>
                         </tr>
-                    @endforeach
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </tbody>
                     <!--end::Table body-->
                 </table>
@@ -110,11 +108,13 @@
                 cancelButtonText: 'خیر'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    window.location = "{{ url('admin/role/delete') }}/" + id
+                    window.location = "<?php echo e(url('admin/role/delete')); ?>/" + id
                 }
             })
         }
     </script>
 
 
-@stop
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.admin.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\sample\panel-admin\resources\views/admin/role/index.blade.php ENDPATH**/ ?>
