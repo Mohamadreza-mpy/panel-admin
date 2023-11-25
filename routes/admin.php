@@ -41,6 +41,15 @@ Route::prefix('admin')->name('admin.')->group(function (){
         Route::get('users/delete/{id}', 'delete')->name('users.delete');
     });
 
+    Route::controller(\App\Http\Controllers\Admin\ArticleController::class)->group(function (){
+        Route::get('article', 'index')->name('article.index');
+        Route::get('article/create', 'getCreate')->name('article.create');
+        Route::post('article/store', 'postCreate')->name('article.create');
+        Route::get('article/edit/{id}', 'getEdit')->name('article.edit');
+        Route::post('article/update/{id}', 'postEdit')->name('article.edit');
+        Route::get('article/delete/{id}', 'delete')->name('article.delete');
+    });
+
 
 
 
