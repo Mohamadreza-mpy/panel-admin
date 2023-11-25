@@ -1,6 +1,4 @@
-@extends('layouts.admin.master')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
 
     <div class="col-xl-12">
         <!--begin::Contacts-->
@@ -38,9 +36,9 @@
             <div class="card-body pt-5">
                 <!--begin::Form-->
                 <form id="kt_ecommerce_settings_general_form" method="POST"
-                    class="form fv-plugins-bootstrap5 fv-plugins-framework" action="{{ url('admin/articleCategory/update/'.$data->id) }}" enctype="multipart/form-data">
-                    @csrf
-                    @include('admin.category-article.form')
+                    class="form fv-plugins-bootstrap5 fv-plugins-framework" action="<?php echo e(url('admin/articleCategory/update/'.$data->id)); ?>" enctype="multipart/form-data">
+                    <?php echo csrf_field(); ?>
+                    <?php echo $__env->make('admin.category-article.form', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
                 </form>
 
@@ -51,4 +49,6 @@
     </div>
 
 
-@stop
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.admin.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\sample\panel-admin\resources\views/admin/category-article/edit.blade.php ENDPATH**/ ?>

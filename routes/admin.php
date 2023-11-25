@@ -50,6 +50,15 @@ Route::prefix('admin')->name('admin.')->group(function (){
         Route::get('article/delete/{id}', 'delete')->name('article.delete');
     });
 
+    Route::controller(\App\Http\Controllers\Admin\ArticleCategoryController::class)->group(function (){
+        Route::get('articleCategory', 'index')->name('articleCategory.index');
+        Route::get('articleCategory/create', 'getCreate')->name('articleCategory.create');
+        Route::post('articleCategory/store', 'postCreate')->name('articleCategory.create');
+        Route::get('articleCategory/edit/{id}', 'getEdit')->name('articleCategory.edit');
+        Route::post('articleCategory/update/{id}', 'postEdit')->name('articleCategory.edit');
+        Route::get('articleCategory/delete/{id}', 'delete')->name('articleCategory.delete');
+    });
+
 
 
 

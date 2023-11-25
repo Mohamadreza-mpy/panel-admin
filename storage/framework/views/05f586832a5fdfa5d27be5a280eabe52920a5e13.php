@@ -1,6 +1,4 @@
-@extends('layouts.admin.master')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
 
     <div class="card mb-5 mb-xl-8">
 
@@ -10,7 +8,7 @@
             </h3>
             <div class="card-toolbar" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-trigger="hover"
                 data-kt-initialized="1">
-                <a href="{{ url('admin/articleCategory/create') }}" class="btn btn-sm btn-light btn-active-info">
+                <a href="<?php echo e(url('admin/articleCategory/create')); ?>" class="btn btn-sm btn-light btn-active-info">
                     <span class="svg-icon svg-icon-3">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -31,42 +29,45 @@
                         <tr class="fw-bold text-muted">
                             <th class="min-w-100px">ردیف</th>
                             <th class="min-w-200px">عنوان</th>
-{{--                            <th class="min-w-100px">تصویر</th>--}}
-{{--                            <th class="min-w-150px">توضیحات کوتاه</th>--}}
+
+
                             <th class="min-w-150px">تاریخ</th>
                             <th class="min-w-100px text-end">عملیات</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($categories as $key=>$category)
+                        <?php $__currentLoopData = $categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key=>$category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <tr>
                                 <td>
-                                    {{ $key+1 }}
+                                    <?php echo e($key+1); ?>
+
                                 </td>
 
                                 <td>
-                                    {{ $category->title }}
+                                    <?php echo e($category->title); ?>
+
                                 </td>
 
-{{--                                <td>--}}
-{{--                                    <div class="d-flex align-items-center">--}}
-{{--                                        <div class="symbol symbol-45px me-5">--}}
-{{--                                            <img src="{{asset('assets/uploads/'.$category->image)}}" alt="{{ $category->alt }}">--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </td>--}}
 
 
-{{--                                <td>--}}
-{{--                                    {{ $category->little_description }}--}}
-{{--                                </td>--}}
+
+
+
+
+
+
+
+
+
+
                                 <td>
-                                    {{jdate(' H:m Y/m/d ',@$departman->created_at->timestamp)}}
+                                    <?php echo e(jdate(' H:m Y/m/d ',@$departman->created_at->timestamp)); ?>
+
                                 </td>
                                 <td>
                                     <div class="d-flex justify-content-end flex-shrink-0">
 
-                                        <a href="{{ url('admin/articleCategory/edit/'.$category->id) }}"
+                                        <a href="<?php echo e(url('admin/articleCategory/edit/'.$category->id)); ?>"
                                             class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1">
                                             <!--begin::Svg Icon | path: icons/duotune/art/art005.svg-->
                                             <span class="svg-icon svg-icon-3">
@@ -82,7 +83,7 @@
                                             </span>
                                             <!--end::Svg Icon-->
                                         </a>
-                                        <a onclick="fire('{{ $category->id }}', '{{ $category->title }}')" href="#" class="btn btn-icon btn-bg-light btn-active-color-danger btn-sm">
+                                        <a onclick="fire('<?php echo e($category->id); ?>', '<?php echo e($category->title); ?>')" href="#" class="btn btn-icon btn-bg-light btn-active-color-danger btn-sm">
                                             <!--begin::Svg Icon | path: icons/duotune/general/gen027.svg-->
                                             <span class="svg-icon svg-icon-3">
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -103,7 +104,7 @@
                                     </div>
                                 </td>
                             </tr>
-                        @endforeach
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </tbody>
                     <!--end::Table body-->
                 </table>
@@ -126,11 +127,13 @@
                 cancelButtonText: 'خیر'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    window.location = "{{ url('admin/articleCategory/delete') }}/" + id
+                    window.location = "<?php echo e(url('admin/articleCategory/delete')); ?>/" + id
                 }
             })
         }
     </script>
 
 
-@stop
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.admin.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\sample\panel-admin\resources\views/admin/category-article/index.blade.php ENDPATH**/ ?>
