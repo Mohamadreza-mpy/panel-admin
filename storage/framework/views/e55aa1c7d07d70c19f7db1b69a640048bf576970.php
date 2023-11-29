@@ -8,7 +8,7 @@
                 <span class="required">عنوان</span>
             </label>
 
-            <input type="text" class="form-control form-control-solid" name="title" value="@if(isset($data)) {{ $data->title }}@else{{old('title')}}@endif">
+            <input type="text" class="form-control form-control-solid" name="title" value="<?php if(isset($data)): ?> <?php echo e($data->title); ?><?php else: ?><?php echo e(old('title')); ?><?php endif; ?>">
 
             <div class="fv-plugins-message-container invalid-feedback"></div>
         </div>
@@ -24,9 +24,9 @@
 
             <select name="category_id" class="form-select" aria-label="Default select example">
                 <option disabled selected>دسته بندی</option>
-                @foreach ($categoryArticles as $catarticle)
-                    <option @if(isset($data) && $catarticle->id == $data->category_id) selected @endif value="{{ $catarticle->id }}">{{ $catarticle->title }}</option>
-                @endforeach
+                <?php $__currentLoopData = $categoryArticles; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $catarticle): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <option <?php if(isset($data) && $catarticle->id == $data->category_id): ?> selected <?php endif; ?> value="<?php echo e($catarticle->id); ?>"><?php echo e($catarticle->title); ?></option>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 
             </select>
@@ -49,7 +49,7 @@
 
     </label>
 
-    <textarea class="form-control form-control-solid ckeditor" rows="5" name="description">@if(isset($data)) {{ $data->description }}@else{{old('description')}}@endif</textarea>
+    <textarea class="form-control form-control-solid ckeditor" rows="5" name="description"><?php if(isset($data)): ?> <?php echo e($data->description); ?><?php else: ?><?php echo e(old('description')); ?><?php endif; ?></textarea>
 
 
 
@@ -64,3 +64,4 @@
     </button>
     <!--end::Button-->
 </div>
+<?php /**PATH D:\sample\panel-admin\resources\views/admin/article/form.blade.php ENDPATH**/ ?>

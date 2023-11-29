@@ -10,7 +10,7 @@
             </h3>
             <div class="card-toolbar" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-trigger="hover"
                 data-kt-initialized="1">
-                <a href="{{ url('admin/articles/create') }}" class="btn btn-sm btn-light btn-active-info">
+                <a href="{{ url('admin/article/create') }}" class="btn btn-sm btn-light btn-active-info">
                     <span class="svg-icon svg-icon-3">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -31,11 +31,9 @@
                         <tr class="fw-bold text-muted">
                             <th class="min-w-100px">ردیف</th>
                             <th class="min-w-200px">عنوان</th>
-                            <th class="min-w-100px">تصویر</th>
-                            <th class="min-w-150px">نویسنده</th>
+
                             <th class="min-w-150px">دسته بندی</th>
-                            <th class="min-w-150px">توضیحات کوتاه</th>
-                            <th class="min-w-120px">وضعیت نمایش</th>
+
                             <th class="min-w-150px">تاریخ</th>
 
                             <th class="min-w-100px text-end">عملیات</th>
@@ -50,36 +48,20 @@
                                 <td>
                                     {{ $article->title }}
                                 </td>
-                                <td>
-                                    <div class="d-flex align-items-center">
-                                        <div class="symbol symbol-45px me-5">
-                                            <img src="{{asset('assets/uploads/'.$article->image)}}" alt="{{ $article->alt }}">
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <a href="#" class="text-dark fw-bold text-hover-primary d-block fs-6">{{ @$article->user->name }}</a>
-                                </td>
+
+
                                 <td>
                                     <a href="#" class="text-dark fw-bold text-hover-primary d-block fs-6">{{ @$article->category->title }}</a>
                                 </td>
-                                <td>
-                                    <a href="#" class="text-dark fw-bold text-hover-primary d-block fs-6">{{ Illuminate\Support\Str::limit(@$article['little_description'], 50, $end='...')}}   </a>
-                                </td>
-                                <td>
-                                    @if($article->index_page == 1)
-                                    <span class="badge badge-light-success fs-8 fw-bold my-2">نمایش در صفحه اول</span>
-                                    @else
-                                    <span class="badge badge-light-danger fs-8 fw-bold my-2">نمایش در صفحه اول</span>
-                                    @endif
-                                </td>
+
+
                                 <td>
                                     {{jdate(' H:m Y/m/d ',@$departman->created_at->timestamp)}}
                                 </td>
                                 <td>
                                     <div class="d-flex justify-content-end flex-shrink-0">
-                                        
-                                        <a href="{{ url('admin/articles/edit/'.$article->id) }}"
+
+                                        <a href="{{ url('admin/article/edit/'.$article->id) }}"
                                             class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1">
                                             <!--begin::Svg Icon | path: icons/duotune/art/art005.svg-->
                                             <span class="svg-icon svg-icon-3">
@@ -139,7 +121,7 @@
                 cancelButtonText: 'خیر'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    window.location = "{{ url('admin/articles/delete') }}/" + id
+                    window.location = "{{ url('admin/article/delete') }}/" + id
                 }
             })
         }

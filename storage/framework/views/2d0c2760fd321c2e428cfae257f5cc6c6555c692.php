@@ -1,6 +1,4 @@
-@extends('layouts.admin.master')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
 
     <div class="col-xl-12">
         <!--begin::Contacts-->
@@ -17,7 +15,7 @@
                         </svg>
                     </span>
 
-                    <h2>افزودن مقاله</h2>
+                    <h2>ویرایش مقاله</h2>
                 </div>
                 <!--end::Card title-->
             </div>
@@ -26,14 +24,11 @@
             <div class="card-body pt-5">
                 <!--begin::Form-->
                 <form id="kt_ecommerce_settings_general_form" method="POST"
-                    class="form fv-plugins-bootstrap5 fv-plugins-framework" action="{{ url('admin/article/store') }}" enctype="multipart/form-data">
-                    @csrf
-                    @include('admin.article.form')
+                    class="form fv-plugins-bootstrap5 fv-plugins-framework" action="<?php echo e(url('admin/article/update/'. $data->id)); ?>" enctype="multipart/form-data">
+                    <?php echo csrf_field(); ?>
+                    <?php echo $__env->make('admin.article.form', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
                 </form>
-
-
-
 
             </div>
 
@@ -42,4 +37,6 @@
     </div>
 
 
-@stop
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.admin.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\sample\panel-admin\resources\views/admin/article/edit.blade.php ENDPATH**/ ?>

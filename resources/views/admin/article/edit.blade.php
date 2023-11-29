@@ -26,16 +26,16 @@
             <div class="card-body pt-5">
                 <!--begin::Form-->
                 <form id="kt_ecommerce_settings_general_form" method="POST"
-                    class="form fv-plugins-bootstrap5 fv-plugins-framework" action="{{ url('admin/articles/update/'. $data->id) }}" enctype="multipart/form-data">
+                    class="form fv-plugins-bootstrap5 fv-plugins-framework" action="{{ url('admin/article/update/'. $data->id) }}" enctype="multipart/form-data">
                     @csrf
                     @include('admin.article.form')
-                    
+
                 </form>
-                
+
             </div>
-           
+
         </div>
-        
+
     </div>
 
 
