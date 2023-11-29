@@ -28,16 +28,7 @@ class UserController extends Controller
 
         if($input['conpassword'] == $input['password'])
         {
-            if ($request->hasFile('image')) {
 
-                $pathMain = "assets/uploads";
-                $extensionf = $request->file('image')->getClientOriginalName();
-                $extension = $request->file('image')->getClientOriginalExtension();
-                $w = str_replace($extension, "webp", $extensionf);
-                $fileName = md5(microtime()). "$w";
-                $request->file('image')->move($pathMain, $fileName);
-                $input['image'] = $fileName;
-            }
             $password = bcrypt($input['password']);
 
 
@@ -78,24 +69,11 @@ class UserController extends Controller
             $password = bcrypt($input['password']);
             if($input['password'] == $input['conpassword'])
             {
-                if ($request->hasFile('image')) {
-
-                    $pathMain = "assets/uploads";
-                    $extensionf = $request->file('image')->getClientOriginalName();
-                    $extension = $request->file('image')->getClientOriginalExtension();
-                    $w = str_replace($extension, "webp", $extensionf);
-                    $fileName = md5(microtime()). "$w";
-                    $request->file('image')->move($pathMain, $fileName);
-                    $image= $fileName;
-                }else
-                {
-                    $image = $user->image;
-                }
 
                 $user->update([
                     'name' => $input['fullname'],
                     'email' => $input['email'],
-                    'image' => $image,
+
                     'password' => $password,
                 ]);
                 if ($request->has('group')) {
@@ -108,38 +86,26 @@ class UserController extends Controller
 
         }else
         {
-            if ($request->hasFile('image')) {
 
-                $pathMain = "assets/uploads";
-                $extensionf = $request->file('image')->getClientOriginalName();
-                $extension = $request->file('image')->getClientOriginalExtension();
-                $w = str_replace($extension, "webp", $extensionf);
-                $fileName = md5(microtime()). "$w";
-                $request->file('image')->move($pathMain, $fileName);
-                $image = $fileName;
-            }else
-            {
-                $image = $user->image;
-            }
             $user->update([
                 'name' => $input['fullname'],
                 'emial' => $input['email'],
-                'image' => $image,
+
                 'password' => $user->password,
-            ]);
-            if ($request->has('group')) {
-                $user->assignRole($input['group']);
+                ]);
+                if ($request->has('group')) {
+                    $user->assignRole($input['group']);
+                }
             }
+            return redirect()->route('admin.users.index')->with('success', 'کاربر شما با موفقیت ویرایش شد');
+
         }
-        return redirect()->route('admin.users.index')->with('success', 'کاربر شما با موفقیت ویرایش شد');
 
-    }
-
-    public function delete($id)
-    {
-        $user = User::find($id)->delete();
-        return redirect()->route('admin.users.index');
-    }
+        public function delete($id)
+        {
+            $user = User::find($id)->delete();
+            return redirect()->route('admin.users.index');
+        }
 
 
     public function createUserVue(Request $request)

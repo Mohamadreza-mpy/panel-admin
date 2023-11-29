@@ -9,7 +9,7 @@
             value="<?php if(isset($data)): ?> <?php echo e($data->name); ?> <?php endif; ?>">
         <div class="fv-plugins-message-container invalid-feedback"></div>
         </div>
-        <?php dd($data->roles); ?>
+
         <div class="col-md-4 p-2">
             <label class="col-lg-12 col-form-label required fw-semibold fs-6">سطح دسترسی</label>
 
@@ -28,16 +28,7 @@
             value="<?php if(isset($data)): ?> <?php echo e($data->email); ?> <?php endif; ?>">
             <div class="fv-plugins-message-container invalid-feedback"></div>
         </div>
-        <div class="col-md-4 p-2">
-            <label class="col-lg-12 col-form-label fw-semibold fs-6">عکس</label>
-            <input type="file" name="image" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
-            placeholder="First name" value="<?php if(isset($data)): ?> <?php echo e($data->image); ?> <?php endif; ?>">
-            <div class="fv-plugins-message-container invalid-feedback"></div>
-            <?php if(isset($data)): ?>
-            <img class="rounded-circle" src="<?php echo e(asset('assets/uploads/' . $data->image)); ?>" style="width: 130px"
-                alt="">
-        <?php endif; ?>
-        </div>
+        
         <div class="col-md-4 p-2">
             <label class=" col-form-label fw-semibold fs-6">
                 <span class="required">رمز عبور</span>
@@ -57,40 +48,8 @@
             <button type="submit" class="btn btn-primary" id="kt_account_profile_details_submit">ذخیره</button>
         </div>
     </div>
-    
-
-                </div>
-
-            </div>
-        </div>
 
 
-
-    </div>
-    <div class="row mb-6">
-
-
-
-        <div class="col-lg-6 fv-row fv-plugins-icon-container">
-
-        </div>
-
-    </div>
-
-    <div class="row mb-6">
-
-
-        <div class="col-lg-4 fv-row fv-plugins-icon-container">
-
-        </div>
-
-
-        <div class="col-lg-4 fv-row fv-plugins-icon-container">
-
-        </div>
-
-
-    </div> --}}
 
 
 
