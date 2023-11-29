@@ -28,7 +28,7 @@
             value="<?php if(isset($data)): ?> <?php echo e($data->email); ?> <?php endif; ?>">
             <div class="fv-plugins-message-container invalid-feedback"></div>
         </div>
-        
+
         <div class="col-md-4 p-2">
             <label class=" col-form-label fw-semibold fs-6">
                 <span class="required">رمز عبور</span>
@@ -48,6 +48,7 @@
             <button type="submit" class="btn btn-primary" id="kt_account_profile_details_submit">ذخیره</button>
         </div>
     </div>
+</div>
 
 
 

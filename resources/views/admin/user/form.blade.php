@@ -48,6 +48,7 @@
             <button type="submit" class="btn btn-primary" id="kt_account_profile_details_submit">ذخیره</button>
         </div>
     </div>
+</div>
 
 
 
