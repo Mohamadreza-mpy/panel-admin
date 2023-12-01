@@ -9,9 +9,9 @@
                  style="background-color: #F1416C;background-image:url('assets/media/svg/shapes/wave-bg-red.svg')">
                 <div class="card-body d-flex align-items-center mb-3">
                     <div class="d-flex align-items-center">
-                        <span class="fs-4hx text-white fw-bold me-6">0</span>
+                        <span class="fs-4hx text-white fw-bold me-6">{{$count_artilce}}</span>
                         <div class="fw-bold fs-6 text-white">
-                            <span class="d-block">تعداد درخواست های مشاوره و خرید</span>
+                            <span class="d-block">تعداد مقالات</span>
                         </div>
                     </div>
 
@@ -27,9 +27,9 @@
 
                 <div class="card-body d-flex align-items-center mb-3">
                     <div class="d-flex align-items-center">
-                        <span class="fs-4hx text-white fw-bold me-6">0</span>
+                        <span class="fs-4hx text-white fw-bold me-6">{{$count_Catergoryartilce}}</span>
                         <div class="fw-bold fs-6 text-white">
-                            <span class="d-block">تعداد دوره ها</span>
+                            <span class="d-block">تعداد دسته بندی مقالات </span>
 
                         </div>
                     </div>
