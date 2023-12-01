@@ -43,195 +43,60 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <div class="row g-5 g-xl-8">
+        <div class="col-xl-12">
+            <div class="card card-xl-stretch mb-5 mb-xl-8">
+
+                <div class="card-header border-0 pt-5 align-items-center">
+                    <h3 class="card-title align-items-start flex-column">
+                        <span class="card-label fw-bold fs-3 mb-1">ادمین ها</span>
+
+                    </h3>
+                </div>
+
+                <div class="card-body py-3">
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="kt_table_widget_4_tab_1" role="tabpanel">
+                            <div class="table-responsive">
+                                <table class="table table-row-dashed table-row-gray-300 align-middle gs-0 gy-4">
+                                    <thead>
+                                    <tr class="fw-bold text-muted">
+                                        <th class="min-w-200px">نام</th>
+                                        <th class="min-w-150px">ایمیل</th>
+
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    <?php $__currentLoopData = $admins; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $admin): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+
+                                                    <div class="d-flex justify-content-start flex-column">
+                                                        <a href="#" class="text-dark fw-bold text-hover-primary fs-6"><?php echo e($admin->name); ?></a>
+
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <a href="#" class="text-dark fw-bold text-hover-primary d-block fs-6"><?php echo e(@$admin->email); ?></a>
+                                            </td>
+
+
+                                        </tr>
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                    </tbody>
+                                    <!--end::Table body-->
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
