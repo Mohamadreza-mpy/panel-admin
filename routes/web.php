@@ -14,3 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 include('admin.php');
+Route::get('login', [\App\Http\Controllers\Auth\AuthController::class, 'login'])->name('admin.login');
+Route::post('login/auth', [\App\Http\Controllers\Auth\AuthController::class, 'authLogin'])->name('admin.auth');

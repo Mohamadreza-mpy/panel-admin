@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::prefix('admin')->name('admin.')->group(function (){
+Route::middleware('admin')->prefix('admin')->name('admin.')->group(function (){
 
 
 
